@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-03T14:30:41 ICT" name="Default suite" finished-at="2022-07-03T14:31:02 ICT" duration-ms="20933">
+    <groups>
+    </groups>
+    <test started-at="2022-07-03T14:30:41 ICT" name="Default test" finished-at="2022-07-03T14:31:02 ICT" duration-ms="20933">
+      <class name="automationfc.Topic_02_Login">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:automationfc.Topic_02_Login@4b45a2f5]" started-at="2022-07-03T14:30:41 ICT" name="beforeClass" finished-at="2022-07-03T14:30:46 ICT" duration-ms="4976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_LoginPageLayout()[pri:0, instance:automationfc.Topic_02_Login@4b45a2f5]" started-at="2022-07-03T14:30:46 ICT" name="TC_01_LoginPageLayout" finished-at="2022-07-03T14:30:48 ICT" duration-ms="1626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_LoginPageLayout -->
+        <test-method signature="TC_02_Loginsuccess()[pri:0, instance:automationfc.Topic_02_Login@4b45a2f5]" started-at="2022-07-03T14:30:48 ICT" name="TC_02_Loginsuccess" finished-at="2022-07-03T14:30:50 ICT" duration-ms="2494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Loginsuccess -->
+        <test-method signature="TC_03_LogOutsuccess()[pri:0, instance:automationfc.Topic_02_Login@4b45a2f5]" started-at="2022-07-03T14:30:50 ICT" name="TC_03_LogOutsuccess" finished-at="2022-07-03T14:31:02 ICT" duration-ms="11781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_LogOutsuccess -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:automationfc.Topic_02_Login@4b45a2f5]" started-at="2022-07-03T14:31:02 ICT" name="afterClass" finished-at="2022-07-03T14:31:02 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- automationfc.Topic_02_Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
