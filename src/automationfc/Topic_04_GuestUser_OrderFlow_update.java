@@ -122,14 +122,64 @@ public class Topic_04_GuestUser_OrderFlow_update {
 	      // PollingTime: Set default wait Time for Implicit, Explicit Wait.
          // Tim hieu them ve ExplicitWait, PollingTime
          // Tim cac tai lieu hoc: Udemy,youtube, An, Anh Dam.
+      //WebElement Price  = driver.findElement(By.xpath("//span[contains(text(),'$25.00')]"));
+      //String PriceValue = Price.getText();
+      //System.out.println(PriceValue);
+      //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      if(driver.findElement(By.xpath("//span[contains(text(),'$25.00')]")).isDisplayed())
+      {
+    	  //driver.findElement(By.xpath("//span[contains(text(),'$25.00')]")).click();
+    	  try {
+    	  		Thread.sleep(5000);
+    	  		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
+    	      }
+    	    catch (InterruptedException e) 
+    	    {
+    	  		// TODO Auto-generated catch block
+    	  		e.printStackTrace();
+    	    }
+    	  
+      }
+      else
+      {
+    	  WebElement ErrrorTitle = driver.findElement(By.xpath("//div[contains(text(),'Sorry, no quotes are available for this order at this time')]"));
+    	  String ErrorText = ErrrorTitle.getText();
+    	  System.out.println("Error is: "+ErrorText);
+      }
      
-	    
-	    
-	    
-	
+      
+      WebElement shippingTitle = driver.findElement(By.xpath("//span[text()='Review & Payments']"));
+      String ShippingTypevalue= shippingTitle.getText();
+      System.out.println("Shipping title is: "+ShippingTypevalue);
+      WebElement PaymentTitle =  driver.findElement(By.xpath("//div[text()='Payment Method']"));
+      String PaymentHeader = PaymentTitle.getText();
+      System.out.println("Payment title is: "+PaymentHeader);
+      String ExpectedTitleElement3 = "Check / Money order";
+   	  String ActualTitleElement3 = driver.findElement(By.xpath("//span[contains(text(), 'Check / Money order')]")).getText();
+   	  Assert.assertEquals(ActualTitleElement3, ExpectedTitleElement3);
+   	  driver.findElement(By.xpath("//span[contains(text(), 'My billing and shipping address are the same')]")).isDisplayed();
+   	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+   	  WebElement BillingElement = driver.findElement(By.xpath("//div[@class='checkout-billing-address']/child::div[2]"));
+      String BillingInfo = BillingElement.getText();
+      System.out.println("Billing FirstName is: "+BillingInfo);
+      WebElement Ordersumarry = driver.findElement(By.xpath("//span[@class='title']"));
+      String OrdersumarryTitle = Ordersumarry.getText();
+      System.out.println("Order Sumaary Title: "+OrdersumarryTitle);
+      WebElement CartSubtotal = driver.findElement(By.xpath("//tr[@class='totals sub']/child::th"));
+      String CartTitle = CartSubtotal.getText();
+      System.out.println("Cart Total text is: "+CartTitle);
+      WebElement PriceElement = driver.findElement(By.xpath("//tr[@class='totals sub']/descendant::span"));
+      String Pricevalue = PriceElement.getText();
+      System.out.println("Cart Total text is: "+Pricevalue);
+      WebElement ShippingPriceelement = driver.findElement(By.xpath("//tr[@class='totals shipping excl']/descendant::span[3]"));
+      String ShippingPrice = ShippingPriceelement.getText();
+      System.out.println("Shipping Price is: "+ShippingPrice);
+      
+    
+    
   }
 	  
-  
+  ///div[@class='checkout-billing-address']/child::div[2]/child::text()[1]
   
   
 
